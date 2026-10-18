@@ -20,7 +20,14 @@ Mã nguồn app, phiên bản Electron, danh sách IPC channel.
 3. Rà toàn bộ IPC: chỉ expose hàm cụ thể qua `contextBridge`; kiểm tra quyền và kiểu tham số trước khi đọc/ghi.
 4. Kiểm tra lưu mật khẩu (hash, không plaintext), backup, nhật ký không chứa bí mật.
 5. Kiểm tra HTML động (không `innerHTML` với dữ liệu người dùng), CSP, phiên bản Electron còn được hỗ trợ.
+5b. Kiểm tra quyền GHI được kiểm lại ở tiến trình chính theo từng bảng; xuất file nhạy cảm (bảng lương) phải fail-closed; sao lưu có mã hóa.
 6. Đề xuất test khai thác an toàn và bản vá tối thiểu.
+
+## Mẫu chuẩn
+Đọc `references/PATTERNS.md` trước khi sửa. Hai module tham chiếu chép nguyên văn từ `LuongHAK_Offline` (app HAK có lớp bảo mật đầy đủ nhất):
+- `references/ipc-guard.js` — IPC chỉ nhận từ đúng trang app, main tự đăng nhập và cấp quyền, phiên hết hạn, khóa khi sai mật khẩu nhiều lần.
+- `references/backup-crypt.js` — sao lưu mã hóa AES-256-GCM + scrypt, phát hiện sửa/đảo/cắt cụt.
+Khi app đích chưa có, đề xuất port các mẫu này (kèm test) thay vì viết mới từ đầu.
 
 ## Đầu ra
 Bảng rủi ro (mức, vị trí, cách khai thác, bản vá), kết luận có/không phát hành.

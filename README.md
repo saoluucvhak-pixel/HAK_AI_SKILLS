@@ -7,6 +7,8 @@ Kho skill AI dùng chung để phát triển, kiểm thử và thiết kế ph�
 | Skill | Dùng khi |
 |---|---|
 | `hak-code-auditor` | Review code, rà lỗi, trước khi báo một thay đổi là xong (chạy `HAK_CODE_QUALITY_TEST`) |
+| `hak-accounting-report-standard` | Màn hình/Excel/PDF có số tiền, khối lượng, ngày; bố cục in; sửa dữ liệu kỳ đã chốt |
+| `hak-business-regression` | Hồi quy nghiệp vụ lương, phiếu cân, thanh toán, kho dăm, kế toán |
 | `hak-ui-designer` | Dựng/sửa giao diện theo `HAK-Enterprise-Design-System` + kiểm tra UX bằng UI UX Pro Max |
 | `ui-ux-pro-max` | Thư viện tra cứu UX (119 quy tắc, biểu đồ, bảng màu, font) — bản gốc MIT, dùng qua `hak-ui-designer` |
 | `hak-task-observer` | Phát hiện việc lặp lại để đề xuất skill mới/nâng cấp skill |
@@ -14,7 +16,7 @@ Kho skill AI dùng chung để phát triển, kiểm thử và thiết kế ph�
 | `hak-data-integrity` | Rà khóa, trùng, mồ côi, tổng cha ≠ tổng con, backup |
 | `hak-migration-manager` | Đổi cấu trúc dữ liệu an toàn, có rollback |
 | `hak-payroll-validator` | Đối chiếu phần mềm lương với quy tắc và chấm công |
-| `hak-electron-security` | Rà bảo mật app Electron offline |
+| `hak-electron-security` | Rà bảo mật app Electron offline — kèm mẫu chuẩn `ipc-guard.js`, `backup-crypt.js` từ LuongHAK_Offline |
 | `hak-release-builder` | Kiểm thử và đóng gói bản phát hành |
 | `hak-smart-filter` | Tích hợp bộ lọc chung `HAK_SMART_FILTER` |
 
@@ -42,6 +44,10 @@ Skill `hak-*` phải có đủ mục: Mục đích, Khi dùng, Đầu vào, Quy 
 ## Quy tắc dữ liệu
 
 Không đưa dữ liệu nhân sự, CCCD, tài khoản ngân hàng, mật khẩu, chứng từ hay lương thật vào skill hoặc ví dụ — chỉ ghi quy tắc và cấu trúc, dùng dữ liệu giả.
+
+## Nguồn hợp nhất
+
+Từ 1.1: các skill trong `LUONG_HAK` (thư mục `HAK_AI_SKILLS/` và `HAK_CODE_QUALITY_TEST/skills/` ở các nhánh `feature/hak-*`) đã gộp vào đây — repo này là bản chuẩn duy nhất.
 
 ## Bên thứ ba
 

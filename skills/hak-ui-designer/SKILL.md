@@ -55,6 +55,8 @@ App và màn hình cần làm, nền tảng (Electron / Apps Script HTML / web),
 - [ ] Không tràn ngang ở 1366×768; bảng rộng cuộn trong vùng.
 - [ ] Tôn trọng `prefers-reduced-motion`; hiệu ứng ≤ 200ms, không animate width/height.
 - [ ] Biểu đồ không chỉ dựa vào màu; có chú giải và tooltip.
+- [ ] Báo cáo in/xuất: A4 dọc cho bảng hẹp, A4 ngang hoặc A3 ngang cho bảng rộng; lặp tiêu đề bảng mỗi trang; khối tổng và chữ ký không bị cắt, không đè chân trang (chi tiết trong `hak-accounting-report-standard`).
+- [ ] Màn hình, Excel, PDF dùng cùng một snapshot lọc (`HAK_SMART_FILTER` `createSnapshot`) — cùng số dòng, cùng tổng.
 - [ ] Chạy `hak-quality` trên thư mục giao diện không có lỗi mức error.
 
 ## Đầu ra

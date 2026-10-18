@@ -19,10 +19,14 @@ Review code/PR, rà soát trước phát hành, sau khi sửa lỗi lớn, hoặ
 2. Chạy công cụ chung `HAK_CODE_QUALITY_TEST`:
    `node <HAK_CODE_QUALITY_TEST>/bin/hak-quality.js <repo> --out reports`
    Đọc `reports/quality-report.json`; mọi phát hiện mức **error** phải được xử lý hoặc giải thích.
-3. Chạy test và lint sẵn có của dự án (`npm test`, `npm run check`…). Ghi lại lệnh và kết quả thật.
+3. Chạy test và lint sẵn có bằng cổng chất lượng để có bằng chứng thật:
+   `node <HAK_CODE_QUALITY_TEST>/bin/hak-quality.js gate --config hak-gate.json --out reports/hak-quality-results.json`
+   Chưa có `hak-gate.json` thì tạo (lệnh dạng mảng argv, vd `["npm","test"]`). Chỉ báo "đạt" khi `verified: true`.
+   Sửa module dùng chung thì thêm `--changed <file>` khi quét để biết file nào bị ảnh hưởng.
 4. Phân tích luồng dữ liệu, cache, vòng đời sự kiện, xử lý lỗi, tính tiền (phải dùng số thập phân chính xác theo `HAK_ACCOUNTING_REPORT_STANDARD`).
 5. Phân loại P0 (mất/sai dữ liệu, bảo mật) / P1 (sai chức năng) / P2 (chất lượng, bảo trì); ghi file, dòng, cách tái hiện, đề xuất sửa.
-6. Sau khi sửa: chạy lại bước 2–3 và so sánh với lần đầu.
+6. Sau khi sửa: chạy lại bước 2–3 và so sánh với lần đầu (`hak-quality history` cho trang so sánh).
+7. Trong CI: ghi kết quả vào bộ nhớ chất lượng (`hak-quality memory …`); khi có đề xuất skill (lỗi lặp ở ≥ 3 commit), chuyển cho `hak-task-observer` soạn.
 
 ## Đầu ra
 Bảng phát hiện (mức, file:dòng, mô tả, cách tái hiện, đề xuất), kết quả `hak-quality` trước/sau, kết quả test.
