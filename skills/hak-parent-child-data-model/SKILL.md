@@ -1,7 +1,15 @@
+---
+name: hak-parent-child-data-model
+description: Thiết kế, kiểm toán và kiểm thử mô hình dữ liệu cha-con (master-detail) cho ứng dụng HAK như DNTT → DNTT_CT, phiếu kho → dòng kho, danh mục → phiên bản. Dùng khi tạo bảng mới có quan hệ cha-con, sửa luồng tạo/xóa chứng từ nhiều dòng, hoặc khi tổng cha lệch tổng con.
+---
+
 # HAK Parent–Child Data Model
 
 ## Mục đích
 Thiết kế, kiểm toán và kiểm thử mô hình dữ liệu cha–con dùng chung cho ứng dụng HAK (offline, LAN, WebApp, AppSheet).
+
+## Khi dùng
+Thiết kế bảng/Sheet mới có quan hệ cha–con; sửa luồng lưu chứng từ nhiều dòng; điều tra tổng cha ≠ tổng con.
 
 ## Đầu vào
 Schema hiện tại, khóa nghiệp vụ, luồng tạo/sửa/xóa, cơ chế lưu trữ, quy tắc phân quyền và mẫu dữ liệu đã ẩn danh.
@@ -24,6 +32,9 @@ Schema hiện tại, khóa nghiệp vụ, luồng tạo/sửa/xóa, cơ chế l�
 
 ## Đầu ra bắt buộc
 ERD, data dictionary, DDL hoặc schema, API contract, ma trận CRUD/quyền, test cases, kế hoạch migration và báo cáo rủi ro.
+
+## Kiểm thử
+Bộ ca ở bước 9 phải có test tự động hoặc kịch bản tái chạy được; ghi kết quả thật.
 
 ## Ràng buộc
 - Không thay đổi công thức lương hoặc logic nghiệp vụ đang chạy nếu không có yêu cầu rõ ràng.
