@@ -21,7 +21,7 @@ Schema hiện tại, khóa nghiệp vụ, luồng tạo/sửa/xóa, cơ chế l�
 4. Định nghĩa chính sách xóa (RESTRICT, soft-delete, cascade có kiểm soát), tránh dòng mồ côi và mất lịch sử.
 5. Thiết kế API CRUD/batch với idempotency key, optimistic concurrency/version khi nhiều máy cùng sửa.
 6. Đối chiếu tổng cha = tổng con theo đơn vị tính, quy tắc làm tròn và phạm vi dữ liệu được phép tính.
-7. Thiết kế giao diện master–detail: chọn cha, bảng con, modal/drawer chi tiết, validation, trạng thái chưa lưu, thông báo lỗi.
+7. Giao diện master–detail: **dùng bộ component chung** `HAK-Enterprise-Design-System/components/master-detail.js` (hướng dẫn `docs/MASTER_DETAIL.md`) — khai báo bảng bằng cấu hình, `_parentId` nối cha–con, `versioning` cho bảng có hiệu lực, `onDelete` cho chính sách xóa, `beforeWrite` gắn khóa kỳ. Chỉ viết giao diện riêng khi component thiếu chức năng, và đề xuất bổ sung vào component.
 8. Xây dựng migration có backup, chạy thử trên dữ liệu ẩn danh, kiểm tra số lượng và checksum trước/sau.
 9. Kiểm thử: cha không con, một con, nhiều con, khóa trùng, FK sai, tạo đồng thời, lỗi giữa transaction, rollback, xóa, cập nhật, import trùng, phân quyền.
 

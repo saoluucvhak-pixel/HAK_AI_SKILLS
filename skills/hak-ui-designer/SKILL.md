@@ -39,7 +39,7 @@ App và màn hình cần làm, nền tảng (Electron / Apps Script HTML / web),
 ## Quy tắc riêng HAK
 - **Số liệu**: căn phải, chữ số cùng độ rộng (`font-variant-numeric: tabular-nums`), phân cách hàng nghìn kiểu VN (`12.500.000`), ngày `dd/MM/yyyy` — định dạng qua `HAK_ACCOUNTING_REPORT_STANDARD`, không tự viết hàm format.
 - **Bảng dữ liệu**: tiêu đề cố định khi cuộn, bảng lớn cuộn trong vùng của nó (không tràn trang), có trạng thái rỗng / đang tải / lỗi, lọc bằng `HAK_SMART_FILTER`.
-- **Master–detail**: danh sách trái, hồ sơ phải; sửa bằng Side Drawer; kỳ đã chốt hiển thị chỉ đọc.
+- **Master–detail**: dùng `components/master-detail.js` của Design System (danh sách trái, hồ sơ phải, tab con, Side Drawer, đào sâu nhiều cấp); kỳ đã chốt chặn qua `beforeWrite`. Chủ đề mặc định **luxe**; **reu** (xanh rêu, `tokens/reu.css`) chỉ là tùy chọn của người dùng.
 - **Không trang trí giả**: không thêm nút, số liệu, biểu đồ, thông báo không có chức năng thật.
 - **Mật độ**: ưu tiên mật độ vừa-cao cho màn hình nhập liệu; vùng bấm tối thiểu 32px trên desktop, 44px nếu có dùng cảm ứng/điện thoại.
 - **Tiếng Việt**: font hiển thị đủ dấu (kiểm tra chữ "Ặ, Ữ, Ỵ"), nhãn rõ nghĩa, không viết tắt khó hiểu.
