@@ -1,3 +1,8 @@
+---
+name: hak-payroll-validator
+description: "Đối chiếu kết quả tính lương của ứng dụng HAK với chứng từ và dữ liệu mẫu để phát hiện sai lệch. Dùng khi người dùng yêu cầu kiểm tra bảng lương, công thức lương hoặc đối chiếu số liệu lương giữa các nguồn."
+---
+
 # HAK Payroll Validator
 
 ## Mục đích

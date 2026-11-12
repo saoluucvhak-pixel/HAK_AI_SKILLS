@@ -1,3 +1,8 @@
+---
+name: hak-ui-designer
+description: "Chuẩn hóa giao diện ứng dụng HAK theo HAK-Enterprise-Design-System (token, bố cục workspace, tương phản AA). Dùng khi người dùng thiết kế, đồng bộ hoặc rà soát giao diện, màu sắc, bố cục của ứng dụng HAK."
+---
+
 # HAK UI Designer
 
 ## Mục đích

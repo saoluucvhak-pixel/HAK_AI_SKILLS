@@ -1,3 +1,8 @@
+---
+name: hak-electron-security
+description: "Rà soát bảo mật ứng dụng Electron offline của HAK (contextIsolation, sandbox, CSP, kênh IPC, đường dẫn tệp, sao lưu/khôi phục). Dùng khi người dùng yêu cầu kiểm tra bảo mật, hardening hoặc review preload/main của ứng dụng Electron."
+---
+
 # HAK Electron Security
 
 ## Mục đích

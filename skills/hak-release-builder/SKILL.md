@@ -1,3 +1,8 @@
+---
+name: hak-release-builder
+description: "Kiểm thử và phát hành ứng dụng HAK có thể truy vết (build, đóng gói, kiểm tra toàn vẹn, ghi chú phiên bản). Dùng khi người dùng yêu cầu phát hành, build bộ cài hoặc chuẩn bị bản phát hành."
+---
+
 # HAK Release Builder
 
 ## Mục đích
