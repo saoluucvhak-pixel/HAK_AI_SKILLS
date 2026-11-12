@@ -1,3 +1,8 @@
+---
+name: hak-parent-child-data-model
+description: "Thiết kế, kiểm toán và kiểm thử mô hình dữ liệu cha–con dùng chung cho ứng dụng HAK (offline, LAN, WebApp, AppSheet): khóa, quan hệ, transaction, trạng thái chứng từ. Dùng khi người dùng thiết kế hoặc rà soát bảng cha/con, phiếu và chi tiết phiếu."
+---
+
 # HAK Parent–Child Data Model
 
 ## Mục đích

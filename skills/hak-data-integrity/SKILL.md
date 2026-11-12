@@ -1,3 +1,8 @@
+---
+name: hak-data-integrity
+description: "Kiểm tra toàn vẹn dữ liệu ứng dụng HAK: khóa, quan hệ, dữ liệu trùng, ràng buộc và an toàn lưu trữ. Dùng khi người dùng yêu cầu kiểm tra trùng lặp, mất khớp số liệu, ràng buộc DB hoặc độ an toàn khi ghi/sao lưu dữ liệu."
+---
+
 # HAK Data Integrity
 
 ## Mục đích

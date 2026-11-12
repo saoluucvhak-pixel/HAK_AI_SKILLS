@@ -1,3 +1,8 @@
+---
+name: hak-code-auditor
+description: "Rà soát chất lượng mã nguồn, kiến trúc, hiệu năng và lỗi hồi quy của ứng dụng HAK, phân loại P0/P1/P2 kèm bằng chứng và đề xuất sửa. Dùng khi người dùng yêu cầu kiểm tra/audit/review toàn bộ code, tìm lỗi, hoặc đánh giá chất lượng một repo HAK."
+---
+
 # HAK Code Auditor
 
 ## Mục đích

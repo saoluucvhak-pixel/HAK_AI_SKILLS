@@ -1,3 +1,8 @@
+---
+name: hak-migration-manager
+description: "Nâng cấp schema và dữ liệu ứng dụng HAK một cách an toàn (sao lưu trước, migration có phiên bản, kiểm tra sau nâng cấp, đường lui). Dùng khi người dùng cần đổi schema, nâng phiên bản dữ liệu hoặc viết migration."
+---
+
 # HAK Migration Manager
 
 ## Mục đích

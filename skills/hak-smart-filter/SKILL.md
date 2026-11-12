@@ -1,3 +1,8 @@
+---
+name: hak-smart-filter
+description: "Rà soát, tích hợp và kiểm thử bộ lọc dữ liệu chung HAK_SMART_FILTER (tìm không dấu, lọc nhiều giá trị, khoảng ngày, preset, trạng thái rỗng). Dùng khi người dùng làm việc với thanh lọc/bộ lọc nâng cao hoặc cần thống nhất kết quả lọc với xuất/in."
+---
+
 # HAK Smart Filter
 
 ## Mục đích
