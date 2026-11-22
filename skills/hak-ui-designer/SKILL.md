@@ -17,3 +17,8 @@ Chuẩn hóa giao diện ứng dụng HAK theo `HAK-Enterprise-Design-System`.
 
 ## Ràng buộc
 Không chỉnh logic nghiệp vụ hoặc công thức tính lương khi sửa giao diện.
+
+## Kết hợp Unslop và Multi-Agent
+- Dùng [hak-unslop-design](../hak-unslop-design/SKILL.md) để rà bố cục, trạng thái UI và visual regression.
+- Dùng [hak-ruflo-multi-agent](../hak-ruflo-multi-agent/SKILL.md) để phân công agent UI, logic và kiểm thử không chồng file.
+- Chỉ dùng API/CLI Unslop hoặc Ruflo sau khi đã xác minh; không thay đổi logic nghiệp vụ khi chỉnh UI.
