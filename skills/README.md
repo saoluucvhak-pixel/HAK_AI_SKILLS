@@ -24,3 +24,8 @@ Nguồn: https://github.com/vercel-labs/agent-skills, pinned commit `5a37a6329fb
 
 - [UI UX Pro Max](hak-ui-ux-pro-max/SKILL.md): lập design system, bảng dữ liệu, typography và kiểm thử trực quan, phối hợp Unslop, HAK UI Designer và Vercel Web Design.
 - Nguồn: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill, pinned commit `6ec2bb58334ca3014573c4cbd4834ee3a40afd9d`, MIT; không tự động chạy upstream CLI.
+
+## Document and architecture agent skills
+
+- [HAK Document Markdown](hak-document-markdown/SKILL.md): tận dụng MarkItDown đã có trong HAK_OCR_ENGINE để chuyển Office thành Markdown cục bộ, có hash và đối chiếu.
+- [HAK Archify Architecture](hak-archify-architecture/SKILL.md): hướng dẫn sinh sơ đồ kiến trúc tương tác từ bằng chứng mã nguồn và review qua PR. Chưa tự động cài/chạy Archify.
