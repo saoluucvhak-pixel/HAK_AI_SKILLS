@@ -24,3 +24,7 @@ Nguồn: https://github.com/vercel-labs/agent-skills, pinned commit `5a37a6329fb
 
 - [UI UX Pro Max](hak-ui-ux-pro-max/SKILL.md): lập design system, bảng dữ liệu, typography và kiểm thử trực quan, phối hợp Unslop, HAK UI Designer và Vercel Web Design.
 - Nguồn: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill, pinned commit `6ec2bb58334ca3014573c4cbd4834ee3a40afd9d`, MIT; không tự động chạy upstream CLI.
+
+## OCR & Document AI
+
+- [HAK OCR Agent](hak-ocr-agent/SKILL.md): OCR offline, trích xuất chứng từ có provenance, đối chiếu nghiệp vụ và phê duyệt trước khi nhập dữ liệu. Engine chính: [HAK_OCR_ENGINE](https://github.com/saoluucvhak-pixel/HAK_OCR_ENGINE).
