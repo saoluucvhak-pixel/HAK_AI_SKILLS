@@ -12,8 +12,9 @@ description: "Đối chiếu kết quả tính lương của ứng dụng HAK v�
 1. Ghi nhận quy tắc lương đang áp dụng, không tự thay đổi.
 2. Kiểm tra chấm công, tăng ca, phụ cấp, hỗ trợ, khấu trừ và thuế.
 3. Đối chiếu tổng hợp với chi tiết, số tiền trước/sau khấu trừ.
-4. Dùng dữ liệu giả lập hoặc dữ liệu được phép xử lý trong môi trường riêng.
-5. Xuất báo cáo chênh lệch, nguyên nhân và test hồi quy.
+4. Kiểm tra đồng bộ định dạng ngày & số theo cấu hình **Cài đặt (Settings)** của hệ thống: tất cả cột ngày trong phần lương/chấm công (kể cả `"Từ ngày"` – `"Đến ngày"`) phải dùng thống nhất một định dạng từ Settings (mặc định `dd/MM/yyyy`), không để lẫn lộn 2 định dạng (`dd/MM/yyyy` và `yyyy-MM-dd`), và số khi nhập phải có ngăn cách hàng nghìn.
+5. Dùng dữ liệu giả lập hoặc dữ liệu được phép xử lý trong môi trường riêng.
+6. Xuất báo cáo chênh lệch, nguyên nhân và test hồi quy.
 
 ## Ràng buộc
 Không đưa thông tin nhân sự, tài khoản ngân hàng, mã định danh hoặc dữ liệu lương thật lên repo công khai.

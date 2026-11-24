@@ -9,10 +9,11 @@ description: "Chuẩn hóa định dạng số, ngày, căn lề, schema báo c�
 - Mọi logic kế toán phải bảo toàn công thức tài chính khớp với dữ liệu thực tế 100%.
 
 ## 2. Quy ước Trình bày & Định dạng
-- **Số Việt Nam:** `1.250.000,75` (dấu chấm ngăn nghìn, dấu phẩy thập phân).
-- **Số khi nhập liệu (Live Input Grouping):** Khi nhập số (số tiền, đơn giá, khối lượng, số lượng) trên giao diện form hoặc ô bảng, phải hiển thị dấu ngăn cách hàng nghìn theo thời gian thực (ví dụ: `1.000.000`, `1.250.000,75`) để người nhập nhìn rõ hàng đơn vị, hàng nghìn, hàng triệu và tránh sai sót; giữ ổn định vị trí con trỏ khi gõ/xóa, và chuẩn hóa về giá trị số thuần (`number` / `decimal`) khi tính toán hoặc lưu DB.
-- **Ngày tháng:** `dd/MM/yyyy`, xác minh lịch hợp lệ; dữ liệu ngày lưu dạng chuẩn hóa ISO.
-- **Bộ lọc / cột "Từ ngày" – "Đến ngày":** `"Từ ngày"` mặc định là ngày đầu tháng hiện tại (`01/MM/yyyy`), `"Đến ngày"` mặc định là ngày hiện tại; cả 2 trường/cột này phải cho phép người dùng nhập tay hoặc chỉnh sửa trực tiếp (kèm kiểm tra hợp lệ `dd/MM/yyyy` và `Từ ngày <= Đến ngày`).
+- **Đồng bộ theo Cài đặt (Settings Sync):** Tất cả định dạng **ngày** và **số** trên toàn bộ hệ thống (kế toán, bảng kê, hóa đơn, **bảng lương / chấm công**, bộ lọc `"Từ ngày"` – `"Đến ngày"`, ô nhập liệu và file xuất Excel) phải đọc và đồng bộ 100% theo cấu hình định dạng trong **Cài đặt (Settings)** của ứng dụng; tuyệt đối không để hiển thị song song 2 định dạng khác nhau (ví dụ vừa `dd/MM/yyyy` vừa `yyyy-MM-dd` trong phần lương). Lưu trữ nội bộ/DB chuẩn hóa ISO, lớp hiển thị/nhập/xuất đồng bộ theo Settings.
+- **Số Việt Nam (mặc định):** `1.250.000,75` (dấu chấm ngăn nghìn, dấu phẩy thập phân).
+- **Số khi nhập liệu (Live Input Grouping):** Khi nhập số (số tiền, đơn giá, khối lượng, số lượng) trên giao diện form hoặc ô bảng, phải hiển thị dấu ngăn cách hàng nghìn theo thời gian thực theo cấu hình Settings (ví dụ: `1.000.000`, `1.250.000,75`) để người nhập nhìn rõ hàng đơn vị, hàng nghìn, hàng triệu và tránh sai sót; giữ ổn định vị trí con trỏ khi gõ/xóa, và chuẩn hóa về giá trị số thuần (`number` / `decimal`) khi tính toán hoặc lưu DB.
+- **Ngày tháng (mặc định):** Theo định dạng ngày trong Settings (mặc định `dd/MM/yyyy`), xác minh lịch hợp lệ; dữ liệu ngày lưu dạng chuẩn hóa ISO.
+- **Bộ lọc / cột "Từ ngày" – "Đến ngày":** `"Từ ngày"` mặc định là ngày đầu tháng hiện tại, `"Đến ngày"` mặc định là ngày hiện tại và hiển thị đúng định dạng ngày trong Settings; cả 2 trường/cột này phải cho phép người dùng nhập tay hoặc chỉnh sửa trực tiếp (kèm kiểm tra hợp lệ theo định dạng Settings và `Từ ngày <= Đến ngày`).
 - **Tiền tệ:** Mặc định 0 chữ số thập phân (VND); cấu hình linh hoạt khi có ngoại tệ.
 - **Khối lượng / Thể tích:** Mặc định 2 chữ số thập phân (`0,00`).
 - **Căn lề chuẩn:** Số tiền, khối lượng, tỷ lệ căn phải; chuỗi văn bản căn trái; ngày căn giữa.
