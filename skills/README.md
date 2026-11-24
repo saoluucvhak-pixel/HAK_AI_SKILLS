@@ -25,6 +25,17 @@ Nguồn: https://github.com/vercel-labs/agent-skills, pinned commit `5a37a6329fb
 - [UI UX Pro Max](hak-ui-ux-pro-max/SKILL.md): lập design system, bảng dữ liệu, typography và kiểm thử trực quan, phối hợp Unslop, HAK UI Designer và Vercel Web Design.
 - Nguồn: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill, pinned commit `6ec2bb58334ca3014573c4cbd4834ee3a40afd9d`, MIT; không tự động chạy upstream CLI.
 
-## OCR & Document AI
+## Document and architecture agent skills
 
+- [HAK Document Markdown](hak-document-markdown/SKILL.md): tận dụng MarkItDown đã có trong HAK_OCR_ENGINE để chuyển Office thành Markdown cục bộ, có hash và đối chiếu.
+- [HAK Archify Architecture](hak-archify-architecture/SKILL.md): hướng dẫn sinh sơ đồ kiến trúc tương tác từ bằng chứng mã nguồn và review qua PR. Chưa tự động cài/chạy Archify.
 - [HAK OCR Agent](hak-ocr-agent/SKILL.md): OCR offline, trích xuất chứng từ có provenance, đối chiếu nghiệp vụ và phê duyệt trước khi nhập dữ liệu. Engine chính: [HAK_OCR_ENGINE](https://github.com/saoluucvhak-pixel/HAK_OCR_ENGINE).
+
+## Vercel Ecosystem Skills
+
+Nguồn các skill mở rộng từ hệ sinh thái Vercel Labs:
+
+- [Agent Browser](agent-browser/SKILL.md): CLI điều khiển browser thông qua Chrome CDP với accessibility-tree snapshot và `@eN` element refs cho AI agent (tự động hóa web, testing, forms, screenshots). Nguồn: https://github.com/vercel-labs/agent-browser, commit `0a923358ea989d7602f0d06507ad3447c62ffe9b`, Apache-2.0.
+- [Find Skills](find-skills/SKILL.md): Tìm kiếm và cài đặt agent skills từ hệ sinh thái open agent skills (Skills CLI / skills.sh). Nguồn: https://github.com/vercel-labs/skills, commit `57217cf86ba38148a57af9e90d14a4c049558330`, MIT.
+- [Web Interface Guidelines](web-interface-guidelines/SKILL.md): Bộ quy tắc kiểm toán UI code theo Vercel Web Interface Guidelines (accessibility, focus states, forms, performance, typography, copy). Nguồn: https://github.com/vercel-labs/web-interface-guidelines, commit `434b7f91364665f2f733b310ec54809bf8f37937`, MIT.
+
