@@ -29,6 +29,7 @@ Nguồn: https://github.com/vercel-labs/agent-skills, pinned commit `5a37a6329fb
 
 - [HAK Document Markdown](hak-document-markdown/SKILL.md): tận dụng MarkItDown đã có trong HAK_OCR_ENGINE để chuyển Office thành Markdown cục bộ, có hash và đối chiếu.
 - [HAK Archify Architecture](hak-archify-architecture/SKILL.md): hướng dẫn sinh sơ đồ kiến trúc tương tác từ bằng chứng mã nguồn và review qua PR. Chưa tự động cài/chạy Archify.
+- [HAK OCR Agent](hak-ocr-agent/SKILL.md): OCR offline, trích xuất chứng từ có provenance, đối chiếu nghiệp vụ và phê duyệt trước khi nhập dữ liệu. Engine chính: [HAK_OCR_ENGINE](https://github.com/saoluucvhak-pixel/HAK_OCR_ENGINE).
 
 ## Vercel Ecosystem Skills
 
