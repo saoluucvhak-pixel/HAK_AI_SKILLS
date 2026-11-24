@@ -12,6 +12,7 @@ description: "Chuẩn hóa định dạng số, ngày, căn lề, schema báo c�
 - **Số Việt Nam:** `1.250.000,75` (dấu chấm ngăn nghìn, dấu phẩy thập phân).
 - **Số khi nhập liệu (Live Input Grouping):** Khi nhập số (số tiền, đơn giá, khối lượng, số lượng) trên giao diện form hoặc ô bảng, phải hiển thị dấu ngăn cách hàng nghìn theo thời gian thực (ví dụ: `1.000.000`, `1.250.000,75`) để người nhập nhìn rõ hàng đơn vị, hàng nghìn, hàng triệu và tránh sai sót; giữ ổn định vị trí con trỏ khi gõ/xóa, và chuẩn hóa về giá trị số thuần (`number` / `decimal`) khi tính toán hoặc lưu DB.
 - **Ngày tháng:** `dd/MM/yyyy`, xác minh lịch hợp lệ; dữ liệu ngày lưu dạng chuẩn hóa ISO.
+- **Bộ lọc / cột "Từ ngày" – "Đến ngày":** `"Từ ngày"` mặc định là ngày đầu tháng hiện tại (`01/MM/yyyy`), `"Đến ngày"` mặc định là ngày hiện tại; cả 2 trường/cột này phải cho phép người dùng nhập tay hoặc chỉnh sửa trực tiếp (kèm kiểm tra hợp lệ `dd/MM/yyyy` và `Từ ngày <= Đến ngày`).
 - **Tiền tệ:** Mặc định 0 chữ số thập phân (VND); cấu hình linh hoạt khi có ngoại tệ.
 - **Khối lượng / Thể tích:** Mặc định 2 chữ số thập phân (`0,00`).
 - **Căn lề chuẩn:** Số tiền, khối lượng, tỷ lệ căn phải; chuỗi văn bản căn trái; ngày căn giữa.
