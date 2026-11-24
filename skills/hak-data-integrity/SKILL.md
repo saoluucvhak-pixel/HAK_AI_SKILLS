@@ -1,19 +1,26 @@
 ---
 name: hak-data-integrity
-description: "Kiểm tra toàn vẹn dữ liệu ứng dụng HAK: khóa, quan hệ, dữ liệu trùng, ràng buộc và an toàn lưu trữ. Dùng khi người dùng yêu cầu kiểm tra trùng lặp, mất khớp số liệu, ràng buộc DB hoặc độ an toàn khi ghi/sao lưu dữ liệu."
+description: "Kiểm tra và bảo vệ toàn vẹn dữ liệu ứng dụng HAK: khóa, quan hệ, dữ liệu trùng, an toàn lưu trữ SQLite/JSON và đóng gói đầy đủ phụ kho (subcontract/)."
 ---
 
-# HAK Data Integrity
+# HAK Data Integrity Standard
 
-## Mục đích
-Kiểm tra khóa, quan hệ, dữ liệu trùng và an toàn lưu trữ.
+## 1. Mục đích
+Bảo vệ tính toàn vẹn, tính nhất quán (ACID), khả năng sao lưu phục hồi 100% và ngăn ngừa mất mát dữ liệu của các ứng dụng HAK (Desktop, Backend, SQLite, JSON).
 
-## Quy trình
-1. Lập bản đồ schema, khóa chính và khóa ngoại.
-2. Kiểm tra dòng mồ côi, trùng khóa, null bất thường và kiểu dữ liệu.
-3. Kiểm tra giao dịch, khôi phục backup, đồng bộ và tính idempotent.
-4. Thử nghiệm migration trên bản sao dữ liệu đã ẩn danh.
-5. Báo cáo sai lệch trước khi đề xuất sửa.
+## 2. Quy tắc Toàn vẹn Dữ liệu Bắt buộc
+1. **Toàn vẹn Sao lưu Phụ kho (Auxiliary Store Backup Rule):**
+   - Khi thực hiện `backup()`, ngoài tệp cơ sở dữ liệu chính (`dgvc.db` hoặc `manifest.json`), **bắt buộc phải quét và đóng gói toàn bộ các thư mục phụ trợ** (như `subcontract/`, `files/*.json`, `machine-state.json`).
+   - Tệp sao lưu `.zip` phải chứa đường dẫn tương đối nguyên vẹn `subcontract/...`.
+2. **Khôi phục Nguyên vẹn (Atomic Restore Rule):**
+   - Quá trình `restore()` / `restoreFile()` phải giải nén và phục hồi chính xác cả kho chính lẫn các phụ kho `subcontract/`.
+   - Có cơ chế sao lưu tạm thời trước khi ghi đè để rollback khi gặp lỗi.
+3. **Kiểm tra Khóa & Ràng buộc (Key & Relation Constraints):**
+   - Khóa chính, khóa ngoại phải có chỉ mục (index) thích hợp.
+   - Không để tồn tại các bản ghi mồ côi (orphan records) giữa đợt nạp và chi tiết phiếu cân / dầu.
+4. **Kiểm thử Bắt buộc:**
+   - Mọi thay đổi tầng lưu trữ phải có test tự động nạp dữ liệu mẫu -> sao lưu -> xóa dữ liệu -> khôi phục -> xác minh dữ liệu đọc lại đầy đủ 100%.
 
-## Ràng buộc
-Không xóa/sửa dữ liệu sản xuất khi chưa được phê duyệt.
+## 3. Ràng buộc An toàn
+- Tuyệt đối không xóa/sửa dữ liệu thật khi chưa qua kiểm thử độc lập.
+- Mọi bản ghi sự kiện phải có mã băm SHA-256 để chống can thiệp trung gian.
