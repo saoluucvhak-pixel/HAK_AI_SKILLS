@@ -8,9 +8,10 @@ Repository này chứa các bộ kỹ năng (`SKILL.md`) chuẩn hóa dành cho 
 
 Chi tiết hướng dẫn tích hợp và phân loại cụ thể xem tại [**skills/README.md**](skills/README.md).
 
-## Phân nhóm Kỹ năng (26 Skills)
+## Phân nhóm Kỹ năng
 
 ### 1. Kỹ năng Nghiệp vụ & Hệ thống HAK
+- [`hak-cap-lai-bao-cao-ngay`](skills/hak-cap-lai-bao-cao-ngay/SKILL.md) hướng dẫn cấp lại giấy phép theo máy và khôi phục cấu hình công ty sau khi cài Windows.
 - [`hak-accounting-report`](skills/hak-accounting-report/SKILL.md): Chuẩn định dạng báo cáo kế toán, số tiền, khối lượng, độ ẩm/khô và quy tắc đơn vị tính động.
 - [`hak-code-auditor`](skills/hak-code-auditor/SKILL.md): Kiểm toán mã nguồn bảo mật (P0–P3), zero runtime dependencies, phân tích tĩnh.
 - [`hak-data-integrity`](skills/hak-data-integrity/SKILL.md): Toàn vẹn dữ liệu, kiểm toán giao dịch, sao lưu phụ kho và phục hồi nguyên tử.

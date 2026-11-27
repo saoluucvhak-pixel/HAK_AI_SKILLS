@@ -1,5 +1,7 @@
 # HAK Skills dùng chung
 
+- [HAK Cấp lại Báo cáo ngày](hak-cap-lai-bao-cao-ngay/SKILL.md) hướng dẫn cấp phép offline theo máy và dùng lại cấu hình công ty sau khi cài Windows.
+
 - [HAK Smart Filter](hak-smart-filter/SKILL.md): lọc nhiều điều kiện, tìm không dấu, khoảng ngày, preset, adapter và kiểm thử.
 - [HAK Accounting Report](hak-accounting-report/SKILL.md): chuẩn định dạng số tiền, khối lượng, độ ẩm, độ khô, ngày và schema báo cáo.
 
